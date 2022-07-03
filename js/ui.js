@@ -7,6 +7,7 @@ function CreateMenu(ele_p) {
     function menu_text() {
 
         let json = {
+
             home: "Home",
             product: "Products",
 
@@ -22,6 +23,7 @@ function CreateMenu(ele_p) {
 
             windows: "windows",
             ElegantWriting: "ElegantWriting"
+
         }
         return json;
 
@@ -37,35 +39,35 @@ function CreateMenu(ele_p) {
                     EJ("div", "menu_products", "menu", menu_text().product, {}, [
                         EJ("ul", "", "down_menu1", "", {}, [
                             EJ("li", "", "", "", {}, [
-                                EJ("div", "", "", menu_text().photoshop),
+                                EJ("div", "menu_ps", "", menu_text().photoshop),
                                 //二级菜单
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().SkinBeautyRetouch),
+                                    EJ("li", "menu_retouch", "", menu_text().SkinBeautyRetouch),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().FreeSkinBeautyRetouch),
+                                    EJ("li", "menu_retouch_free", "", menu_text().FreeSkinBeautyRetouch),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().PhotoEffects),
+                                    EJ("li", "menu_effects", "", menu_text().PhotoEffects),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().TranslationPSD),
+                                    EJ("li", "menu_translation", "", menu_text().TranslationPSD),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().ShadowTool),
+                                    EJ("li", "menu_shadow", "", menu_text().ShadowTool),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().TextEffect),
+                                    EJ("li", "menu_3dtext", "", menu_text().TextEffect),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().AddWatermarkInBatch),
+                                    EJ("li", "menu_mark", "", menu_text().AddWatermarkInBatch),
                                 ]),
                             ]),
                             EJ("li", "", "", "", {}, [
-                                EJ("div", "", "", menu_text().windows),
+                                EJ("div", "menu_win", "", menu_text().windows),
                                 //二级菜单
                                 EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "", "", menu_text().ElegantWriting),
+                                    EJ("li", "menu_writing", "", menu_text().ElegantWriting),
                                 ]),
                             ])
                         ]),
@@ -129,6 +131,62 @@ function CreateFoot(ele_p) {
     CreateELE(json, ele_p);
 }
 
+/**
+ * 创建监听器
+ */
+function CreateEvent(){
+
+
+
+    AddEvent(GetID("menu_bar"),"click",function(e){
+
+        if(e.target.id=="menu_home"){
+            // open_web_PS("");
+        }
+        if(e.target.id=="menu_products"){
+            // open_web_PS("");
+        }
+        if(e.target.id=="menu_ps"){
+            // open_web_PS("");
+        }
+        if(e.target.id=="menu_retouch"){
+            open_web_PS("c7ac739d");
+        }
+        if(e.target.id=="menu_retouch_free"){
+            open_web_PS("3a0d9f39");
+        }
+        if(e.target.id=="menu_effects"){
+            open_web_PS("e4ca27aa");
+        }
+        if(e.target.id=="menu_translation"){
+            open_web_PS("92dcdcaa");
+        }
+        if(e.target.id=="menu_shadow"){
+            open_web_PS("2d5b1abf");
+        }
+        if(e.target.id=="menu_3dtext"){
+            open_web_PS("4e2e025d");
+        }
+        if(e.target.id=="menu_mark"){
+            open_web_PS("cd550302");
+        }
+        if(e.target.id=="menu_win"){
+            // open_web_PS("");
+        }
+        if(e.target.id=="menu_writing"){
+            open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K","_blank");
+        }
+
+    });
+
+    AddEvent(GetID("banner"),"click",function(e){
+        if(e.target.id=="banner1"){
+            open_web_PS("c7ac739d");
+        }
+    });
+    
+}
+
 function CreateUI() {
 
     // EJ("div", "menu_bar", "", "", {},[])
@@ -136,4 +194,30 @@ function CreateUI() {
     CreateMenu(ele_p);
     CreateBanner(ele_p);
     CreateFoot(ele_p);
+    CreateEvent();
+
+}
+
+
+
+
+
+
+
+function open_web(v,b){
+
+    if(b==undefined){
+        b="_blank";
+    }
+    window.open(v,b);
+
+}
+
+function open_web_PS(v,b){
+
+    if(b==undefined){
+        b="_blank";
+    }
+    window.open(("https://exchange.adobe.com/creativecloud/plugindetails.html/app/cc/"+v),b);
+
 }

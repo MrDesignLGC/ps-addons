@@ -21,6 +21,7 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin-left: 50px;
   width: 50%;
   height: 100%;
 }
@@ -28,7 +29,6 @@ ul li {
 .menu {
   color: #000;
   width: 100px;
-  margin-left: 50px;
   height: 100%;
   text-align: left;
   text-indent: 1em;
