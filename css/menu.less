@@ -1,0 +1,143 @@
+@menubarbg: rgba(245, 245, 245, 0.8);
+@menubarfont: #000;
+@menubarul: rgba(243, 243, 243, 0.8);
+@menubarhover: rgba(179, 218, 255, 0.3);
+@menubaracive:rgba(179, 218, 255, 0.3);
+@bodercolor1: rgba(0, 0, 0,0.8);
+@bodercolor2: rgba(0, 0, 0,0.8);
+
+@menu_width: 100%;
+@menu_heigth: 50px;
+//一级菜单宽度
+@menuitem_w1:100px;
+@menuitem_w2:150px;
+@menuitem_w3:230px;
+@menuli_width: 100%;
+@menuli_heigth: 50px;
+
+ul li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/**菜单栏**********/
+#menu_bar {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background: @menubarbg;
+    width: @menu_width;
+    height: @menu_heigth;
+    line-height: @menu_heigth;
+    border-bottom: 1px dashed @bodercolor1;
+    z-index: 99;
+}
+
+
+/*----------菜单-----------*/
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 50%;
+    height: 100%;
+    // background: rgb(236, 236, 236);
+}
+
+/*----------一级菜单-----------*/
+.menu {
+    color: @menubarfont;
+    width: @menuitem_w1;
+    margin-left: 50px;
+    height: 100%;
+    text-align: left;
+    text-indent: 1em;
+    /*2级3级菜单共享的ul设置*/
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        background: @menubarul;
+        display: none;
+        text-align: left;
+        text-indent: 1em;
+    }
+
+}
+
+
+
+/*----------二级菜单-----------*/
+.down_menu1 {
+    width: @menuitem_w2;
+    margin-top: 0px;
+}
+
+.down_menu1 li {
+
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    // line-height: @menuli_heigth;
+    /*不要用百分比*/
+    height: @menuli_heigth;
+    // text-align: left;
+    border-bottom: 1px dashed @bodercolor2;
+}
+
+/*----------三级菜单-----------*/
+.down_menu2 {
+    position: relative;
+    width:@menuitem_w3;
+    left: @menuitem_w2;
+    top: -@menuli_heigth;
+}
+
+
+
+/*----------所有菜单的hover样式-----------*/
+//一级
+.menu:hover {
+    cursor: pointer;
+    // height: 50px;
+    background: @menubarhover;
+}
+.menu:active {
+    cursor: pointer;
+    // height: 50px;
+    background: @menubaracive;
+}
+
+
+
+
+
+#menu_bar ul li:hover {
+    cursor: pointer;
+    background: @menubarhover;
+}
+
+#menu_bar ul li:active {
+    cursor: pointer;
+    background: @menubaracive;
+}
+
+
+/*----------弹出2级菜单-----------*/
+.menu:hover .down_menu1 {
+    display: block;
+}
+/*----------弹出3级菜单-----------*/
+.down_menu1 li:hover .down_menu2 {
+    display: block;
+    cursor: pointer;
+}
+
+
+
+

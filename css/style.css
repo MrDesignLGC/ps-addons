@@ -1,0 +1,82 @@
+ul li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+/**菜单栏**********/
+#menu_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: rgba(226, 226, 226, 0);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.8);
+}
+/*----------菜单-----------*/
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+/*----------一级菜单-----------*/
+.menu {
+  color: #000;
+  width: 100px;
+  height: 100%;
+  text-align: left;
+  text-indent: 1em;
+  /*2级3级菜单共享的ul设置*/
+}
+.menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  background: rgba(226, 226, 226, 0.1);
+  display: none;
+  text-align: left;
+  text-indent: 1em;
+}
+/*----------二级菜单-----------*/
+.down_menu1 {
+  margin-top: 0px;
+}
+.down_menu1 li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  /*不要用百分比*/
+  height: 50px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+/*----------三级菜单-----------*/
+.down_menu2 {
+  position: relative;
+  left: 100px;
+  top: -50px;
+}
+/*----------所有菜单的hover样式-----------*/
+/*----------弹出2级菜单-----------*/
+.menu:hover .down_menu1 {
+  display: block;
+}
+ul li:hover {
+  cursor: pointer;
+  background: rgba(175, 175, 175, 0.1);
+}
+ul li:active {
+  background: rgba(175, 175, 175, 0.3);
+}
+.down_menu1 li:hover .down_menu2 {
+  display: block;
+  cursor: pointer;
+}
+.menu:hover {
+  cursor: pointer;
+  background: rgba(175, 175, 175, 0.1);
+}
