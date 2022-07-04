@@ -60,6 +60,9 @@ function CreateMenu(ele_p) {
                                     EJ("li", "menu_3dtext", "", menu_text().TextEffect),
                                 ]),
                                 EJ("ul", "", "down_menu2", "", {}, [
+                                    EJ("li", "menu_3dtext", "", menu_text().ExportAllText),
+                                ]),
+                                EJ("ul", "", "down_menu2", "", {}, [
                                     EJ("li", "menu_mark", "", menu_text().AddWatermarkInBatch),
                                 ]),
                             ]),
