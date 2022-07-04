@@ -137,7 +137,7 @@ function CreateFoot(ele_p) {
 function CreateEvent(){
 
 
-
+    //菜单
     AddEvent(GetID("menu_bar"),"click",function(e){
 
         if(e.target.id=="menu_home"){
@@ -179,12 +179,20 @@ function CreateEvent(){
 
     });
 
+    //海报
     AddEvent(GetID("banner"),"click",function(e){
         if(e.target.id=="banner1"){
             open_web_PS("c7ac739d");
         }
     });
     
+    //页脚
+    AddEvent(GetID("foot"),"click",function(e){
+        if(e.target.id=="foot_youtube"){
+            open_web("https://www.youtube.com/channel/UCH6cap6hFRZ32byGZrsbmWQ");
+        }
+    });
+
 }
 
 function CreateUI() {

@@ -30,7 +30,7 @@ ul li {
   color: #000;
   width: 100px;
   height: 100%;
-  text-align: left;
+  text-align: center;
   text-indent: 1em;
   /*2级3级菜单共享的ul设置*/
 }

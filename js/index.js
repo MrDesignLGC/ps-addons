@@ -1,2 +1,3 @@
 
 CreateUI();
+inti();
