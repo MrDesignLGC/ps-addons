@@ -14,15 +14,31 @@ function GetClass(n) {
  * 类型，id,class,文本,自定义属性,子元素json
  * [EJ("div", "a03", "a", "02")]
  */
-function EJ(type = "div", id = "", class_n = "", text = "", attri = {}, json = [{}]) {
+function EJ(ele_arrt={type:"div", id : "", cn :"", text : "", attr : {}}, json = [{}]) {
+
+    if(ele_arrt.type==undefined){
+        ele_arrt.type="div";
+    }
+    if(ele_arrt.id==undefined){
+        ele_arrt.id="";
+    }
+    if(ele_arrt.cn==undefined){
+        ele_arrt.cn="";
+    }
+    if(ele_arrt.text==undefined){
+        ele_arrt.text="";
+    }
+    if(ele_arrt.attr==undefined){
+        ele_arrt.attr={};
+    }
 
     let ele_json = {
-        "type": type,
-        "id": id,
-        "class": class_n,
-        "text": text,
+        "type": ele_arrt.type,
+        "id": ele_arrt.id,
+        "class": ele_arrt.cn,
+        "text": ele_arrt.text,
         "child": json,
-        "attribute": attri
+        "attribute": ele_arrt.attr
     }
 
     return ele_json;

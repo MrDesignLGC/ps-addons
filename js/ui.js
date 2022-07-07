@@ -30,47 +30,46 @@ function CreateMenu(ele_p) {
     }
 
     let json = [
-        EJ("div", "menu_bar", "", "", {},
+        EJ({id:"menu_bar"},
             [
-
-                EJ("nav", "nav", "", "", {}, [
-                    EJ("div", "menu_home", "menu", menu_text().home),
+                EJ({type:"nav",id:"nav"}, [
+                    EJ({id:"menu_home",cn:"menu",text:menu_text().home}),
                     //一级菜单
-                    EJ("div", "menu_products", "menu", menu_text().product, {}, [
-                        EJ("ul", "", "down_menu1", "", {}, [
-                            EJ("li", "", "", "", {}, [
-                                EJ("div", "menu_ps", "", menu_text().photoshop),
+                    EJ({id:"menu_products",cn:"menu",text:menu_text().product}, [
+                        EJ({type:"ul",cn:"down_menu1"}, [
+                            EJ({type:"li"}, [
+                                EJ({id:"menu_ps",text:menu_text().photoshop}),
                                 //二级菜单
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_retouch", "", menu_text().SkinBeautyRetouch),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_retouch",text:menu_text().SkinBeautyRetouch}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_retouch_free", "", menu_text().FreeSkinBeautyRetouch),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_retouch_free",text:menu_text().FreeSkinBeautyRetouch}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_effects", "", menu_text().PhotoEffects),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_effects",text:menu_text().PhotoEffects}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_translation", "", menu_text().TranslationPSD),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_translation",text:menu_text().TranslationPSD}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_shadow", "", menu_text().ShadowTool),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_shadow",text:menu_text().ShadowTool}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_3dtext", "", menu_text().TextEffect),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_3dtext",text:menu_text().TextEffect}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_3dtext", "", menu_text().ExportAllText),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_exportalltext",text:menu_text().ExportAllText}),
                                 ]),
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_mark", "", menu_text().AddWatermarkInBatch),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_mark",text:menu_text().AddWatermarkInBatch}),
                                 ]),
                             ]),
-                            EJ("li", "", "", "", {}, [
-                                EJ("div", "menu_win", "", menu_text().windows),
+                            EJ({type:"li"}, [
+                                EJ({id:"menu_win",text:menu_text().windows}),
                                 //二级菜单
-                                EJ("ul", "", "down_menu2", "", {}, [
-                                    EJ("li", "menu_writing", "", menu_text().ElegantWriting),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_writing",text:menu_text().ElegantWriting}),
                                 ]),
                             ])
                         ]),
@@ -94,9 +93,8 @@ function CreateProduct(ele_p) {
  */
 function CreateBanner(ele_p) {
     let json = [
-        EJ("div", "banner", "", "", {}, [
-            EJ("div", "banner1", "banner_class", "", {}),
-            // EJ("div", "banner2", "banner_class", "", {})
+        EJ({id:"banner"}, [
+            EJ({id:"banner1",cn:"banner_class"}),
         ])
     ];
     CreateELE(json, ele_p);
@@ -115,18 +113,18 @@ function CreateFoot(ele_p) {
         foot_ms:"Microsoft software",
     }
     let json = [
-        EJ("div", "foot", "", "", {}, [
+        EJ({id:"foot"}, [
 
-            EJ("ul", "", "", "", {}, [
-                EJ("li", "", "fool_ul_first_li", message.common_problem),
-                EJ("li", "foot_plugin", "", message.foot_plugin),
-                EJ("li", "foot_ms", "", message.foot_ms),
+            EJ({type:"ul"}, [
+                EJ({type:"li",cn:"fool_ul_first_li",text:message.common_problem}),
+                EJ({type:"li",id:"foot_plugin",text:message.foot_plugin}),
+                EJ({type:"li",id:"foot_ms",text:message.foot_ms}),
             ]),
 
-            EJ("ul", "", "", "", {}, [
-                EJ("li", "", "fool_ul_first_li", message.About_us),
-                EJ("li", "foot_email", "", message.foot_email),
-                EJ("li", "foot_youtube", "", message.foot_youtube),
+            EJ({type:"ul"}, [
+                EJ({type:"li",cn:"fool_ul_first_li",text:message.About_us}),
+                EJ({type:"li",id:"foot_email",text:message.foot_email}),
+                EJ({type:"li",id:"foot_youtube",text:message.foot_youtube}),
             ]),
 
         ])
@@ -203,8 +201,17 @@ function CreateUI() {
     // EJ("div", "menu_bar", "", "", {},[])
     let ele_p = document.getElementsByTagName("body")[0];
     CreateMenu(ele_p);
-    CreateBanner(ele_p);
+
+    CreateELE([
+        EJ({id:"content"})
+    ], ele_p);
+    let content_frame=document.getElementById("content");
+
+    CreateBanner(content_frame);
+
     CreateFoot(ele_p);
+
+
     CreateEvent();
 
 }
