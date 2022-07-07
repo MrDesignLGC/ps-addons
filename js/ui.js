@@ -25,6 +25,7 @@ function CreateMenu(ele_p) {
             ElegantWriting: "ElegantWriting"
 
         }
+
         return json;
 
     }
@@ -81,12 +82,15 @@ function CreateMenu(ele_p) {
     CreateELE(json, ele_p);
 
 }
+
+
 /**
  * 创建产品
  */
 function CreateProduct(ele_p) {
 
 }
+
 
 /**
  * 创建海报
@@ -99,6 +103,7 @@ function CreateBanner(ele_p) {
     ];
     CreateELE(json, ele_p);
 }
+
 
 /**
  * 创建底部
@@ -131,6 +136,7 @@ function CreateFoot(ele_p) {
     ];
     CreateELE(json, ele_p);
 }
+
 
 /**
  * 创建监听器
@@ -195,6 +201,7 @@ function CreateEvent(){
     });
 
 }
+
 
 function CreateUI() {
 
