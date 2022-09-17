@@ -15,6 +15,7 @@ function CreateMenu(ele_p) {
             SkinBeautyRetouch: "Skin Beauty Retouch",
             FreeSkinBeautyRetouch: "Free Skin Beauty Retouch",
             PhotoEffects: "Photo Effects",
+            ID_Photo: "ID Photo",
             TranslationPSD: "Translation PSD",
             ShadowTool: "Shadow Tool",
             TextEffect: "3DText Effect",
@@ -49,6 +50,9 @@ function CreateMenu(ele_p) {
                                 ]),
                                 EJ({type:"ul",cn:"down_menu2"}, [
                                     EJ({type:"li",id:"menu_effects",text:menu_text().PhotoEffects}),
+                                ]),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_id_photo",text:menu_text().ID_Photo}),
                                 ]),
                                 EJ({type:"ul",cn:"down_menu2"}, [
                                     EJ({type:"li",id:"menu_translation",text:menu_text().TranslationPSD}),
@@ -102,6 +106,11 @@ function CreateBanner(ele_p) {
         ])
     ];
     CreateELE(json, ele_p);
+}
+
+
+function CreateSubPage(ele_p){
+
 }
 
 
@@ -164,6 +173,9 @@ function CreateEvent(){
         }
         if(e.target.id=="menu_effects"){
             open_web_PS("e4ca27aa");
+        }
+        if(e.target.id=="menu_id_photo"){
+            open_web_PS("572edab9");
         }
         if(e.target.id=="menu_translation"){
             open_web_PS("92dcdcaa");
