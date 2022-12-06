@@ -65,7 +65,7 @@ ul li {
 /*----------所有菜单的hover样式-----------*/
 .menu:hover {
   cursor: pointer;
-  background: rgba(179, 218, 255, 0.3);
+  background: #1cacff;
 }
 .menu:active {
   cursor: pointer;
@@ -73,7 +73,7 @@ ul li {
 }
 #menu_bar ul li:hover {
   cursor: pointer;
-  background: rgba(179, 218, 255, 0.3);
+  background: #1cacff;
 }
 #menu_bar ul li:active {
   cursor: pointer;

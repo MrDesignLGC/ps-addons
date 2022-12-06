@@ -153,51 +153,7 @@ function CreateFoot(ele_p) {
 function CreateEvent(){
 
 
-    //菜单
-    AddEvent(GetID("menu_bar"),"click",function(e){
-
-        if(e.target.id=="menu_home"){
-            // open_web_PS("");
-        }
-        if(e.target.id=="menu_products"){
-            // open_web_PS("");
-        }
-        if(e.target.id=="menu_ps"){
-            // open_web_PS("");
-        }
-        if(e.target.id=="menu_retouch"){
-            open_web_PS("c7ac739d");
-        }
-        if(e.target.id=="menu_retouch_free"){
-            open_web_PS("3a0d9f39");
-        }
-        if(e.target.id=="menu_effects"){
-            open_web_PS("e4ca27aa");
-        }
-        if(e.target.id=="menu_id_photo"){
-            open_web_PS("572edab9");
-        }
-        if(e.target.id=="menu_translation"){
-            open_web_PS("92dcdcaa");
-        }
-        if(e.target.id=="menu_shadow"){
-            open_web_PS("2d5b1abf");
-        }
-        if(e.target.id=="menu_3dtext"){
-            open_web_PS("4e2e025d");
-        }
-        if(e.target.id=="menu_mark"){
-            open_web_PS("cd550302");
-        }
-        if(e.target.id=="menu_win"){
-            // open_web_PS("");
-        }
-        if(e.target.id=="menu_writing"){
-            open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K","_blank");
-        }
-
-    });
-
+    CreateEvent_TopAndBottom();
     //海报
     AddEvent(GetID("banner"),"click",function(e){
         if(e.target.id=="banner1"){
@@ -205,13 +161,68 @@ function CreateEvent(){
         }
     });
     
-    //页脚
-    AddEvent(GetID("foot"),"click",function(e){
-        if(e.target.id=="foot_youtube"){
-            open_web("https://www.youtube.com/channel/UCH6cap6hFRZ32byGZrsbmWQ");
-        }
-    });
 
+
+}
+
+//导航和底部监听器
+function CreateEvent_TopAndBottom(){
+        //菜单
+        AddEvent(GetID("menu_bar"),"click",function(e){
+
+            if(e.target.id=="menu_home"){
+                // open_web_PS("");
+            }
+            if(e.target.id=="menu_products"){
+                open_web("sub/product/product.html")
+            }
+            if(e.target.id=="menu_ps"){
+                // open_web_PS("");
+            }
+            if(e.target.id=="menu_retouch"){
+                open_web_PS("c7ac739d");
+            }
+            if(e.target.id=="menu_retouch_free"){
+                open_web_PS("3a0d9f39");
+            }
+            if(e.target.id=="menu_effects"){
+                open_web_PS("e4ca27aa");
+            }
+            if(e.target.id=="menu_id_photo"){
+                open_web_PS("572edab9");
+            }
+            if(e.target.id=="menu_translation"){
+                open_web_PS("92dcdcaa");
+            }
+            if(e.target.id=="menu_shadow"){
+                open_web_PS("2d5b1abf");
+            }
+            if(e.target.id=="menu_3dtext"){
+                open_web_PS("4e2e025d");
+            }
+            if(e.target.id=="menu_mark"){
+                open_web_PS("cd550302");
+            }
+            if(e.target.id=="menu_exportalltext"){
+                open_web_PS("e25efe4c");
+            }
+            
+            if(e.target.id=="menu_win"){
+                // open_web_PS("");
+            }
+            if(e.target.id=="menu_writing"){
+                open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K","_blank");
+            }
+    
+        });
+
+        
+        //页脚
+        AddEvent(GetID("foot"),"click",function(e){
+            if(e.target.id=="foot_youtube"){
+                open_web("https://www.youtube.com/channel/UCH6cap6hFRZ32byGZrsbmWQ");
+            }
+        });
 }
 
 
@@ -219,19 +230,14 @@ function CreateUI() {
 
     // EJ("div", "menu_bar", "", "", {},[])
     let ele_p = document.getElementsByTagName("body")[0];
+    //菜单
     CreateMenu(ele_p);
-
+    //内容框架元素
     CreateELE([
         EJ({id:"content"})
     ], ele_p);
-    let content_frame=document.getElementById("content");
-
-    CreateBanner(content_frame);
-
+    
     CreateFoot(ele_p);
-
-
-    CreateEvent();
 
 }
 
@@ -239,15 +245,12 @@ function CreateUI() {
 
 
 
+/**
+ * 函数
+ */
 
-
-function open_web(v,b){
-
-    if(b==undefined){
-        b="_blank";
-    }
+function open_web(v,b="_blank"){
     window.open(v,b);
-
 }
 
 function open_web_PS(v,b){
