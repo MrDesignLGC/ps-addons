@@ -20,9 +20,9 @@ CreateELE([
 let content_h=window.innerHeight;
 let buy_frame = document.getElementById("buy_frame");
 buy_frame.style.top=content_h/2-(buy_frame.clientHeight/2)+"px"
-AddEvent(buy_frame,"click",function(e){
-    open_web_PS("c7ac739d");
-})
+// AddEvent(buy_frame,"click",function(e){
+//     open_web_PS("c7ac739d");
+// })
 
 
 

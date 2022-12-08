@@ -173,9 +173,9 @@ function CreateEvent_TopAndBottom(){
             if(e.target.id=="menu_home"){
                 // open_web_PS("");
             }
-            if(e.target.id=="menu_products"){
-                open_web("sub/product/product.html")
-            }
+            // if(e.target.id=="menu_products"){
+            //     open_web("sub/product/product.html")
+            // }
             if(e.target.id=="menu_ps"){
                 // open_web_PS("");
             }
