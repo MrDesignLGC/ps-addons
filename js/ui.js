@@ -15,7 +15,10 @@ function CreateMenu(ele_p) {
             SkinBeautyRetouch: "Skin Beauty Retouch",
             FreeSkinBeautyRetouch: "Free Skin Beauty Retouch",
             PhotoEffects: "Photo Effects",
+            CartoonEffects: "Cartoon effects",
+            SketchEffects: "Sketch effects",
             ID_Photo: "ID Photo",
+            AutomaticTypesetting: "Automatic Typesetting",
             TranslationPSD: "Translation PSD",
             ShadowTool: "Shadow Tool",
             TextEffect: "3DText Effect",
@@ -50,6 +53,15 @@ function CreateMenu(ele_p) {
                                 ]),
                                 EJ({type:"ul",cn:"down_menu2"}, [
                                     EJ({type:"li",id:"menu_effects",text:menu_text().PhotoEffects}),
+                                ]),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_sketchEffects",text:menu_text().SketchEffects}),
+                                ]),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_cartoonEffects",text:menu_text().CartoonEffects}),
+                                ]),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_automaticTypesetting",text:menu_text().AutomaticTypesetting}),
                                 ]),
                                 EJ({type:"ul",cn:"down_menu2"}, [
                                     EJ({type:"li",id:"menu_id_photo",text:menu_text().ID_Photo}),
@@ -205,6 +217,16 @@ function CreateEvent_TopAndBottom(){
             }
             if(e.target.id=="menu_exportalltext"){
                 open_web_PS("e25efe4c");
+            }
+
+            if(e.target.id=="menu_automaticTypesetting"){
+                open_web_PS("b8f5d8b9");
+            }
+            if(e.target.id=="menu_cartoonEffects"){
+                open_web_PS("3175dc8c");
+            }
+            if(e.target.id=="menu_sketchEffects"){
+                open_web_PS("6b3d739d");
             }
             
             if(e.target.id=="menu_win"){
