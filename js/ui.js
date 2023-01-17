@@ -21,6 +21,7 @@ function CreateMenu(ele_p) {
             AutomaticTypesetting: "Automatic Typesetting",
             TranslationPSD: "Translation PSD",
             ShadowTool: "Shadow Tool",
+            HandleLayers: "Handle layers",
             TextEffect: "3DText Effect",
             ExportAllText: "ExportAllText",
             AddWatermarkInBatch: "Add Watermark in Batch",
@@ -80,6 +81,9 @@ function CreateMenu(ele_p) {
                                 ]),
                                 EJ({type:"ul",cn:"down_menu2"}, [
                                     EJ({type:"li",id:"menu_mark",text:menu_text().AddWatermarkInBatch}),
+                                ]),
+                                EJ({type:"ul",cn:"down_menu2"}, [
+                                    EJ({type:"li",id:"menu_handlelayers",text:menu_text().HandleLayers}),
                                 ]),
                             ]),
                             EJ({type:"li"}, [
@@ -227,6 +231,9 @@ function CreateEvent_TopAndBottom(){
             }
             if(e.target.id=="menu_sketchEffects"){
                 open_web_PS("6b3d739d");
+            }
+            if(e.target.id=="menu_handlelayers"){
+                open_web_PS("0179c1c9");
             }
             
             if(e.target.id=="menu_win"){
