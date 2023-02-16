@@ -189,9 +189,9 @@ function CreateEvent_TopAndBottom(){
             if(e.target.id=="menu_home"){
                 // open_web_PS("");
             }
-            // if(e.target.id=="menu_products"){
-            //     open_web("sub/product/product.html")
-            // } 
+            if(e.target.id=="menu_products"){
+                open_web("https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421")
+            } 
             if(e.target.id=="menu_ps"){
                 // open_web_PS("");
             }
@@ -242,7 +242,7 @@ function CreateEvent_TopAndBottom(){
             if(e.target.id=="menu_writing"){
                 open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K","_blank");
             }
-    
+            // https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421
         });
 
         
