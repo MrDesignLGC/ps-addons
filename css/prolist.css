@@ -1,0 +1,50 @@
+#ProList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  height: auto;
+  background-color: #fdfdfd;
+}
+#ProList .ProList_child {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  height: 150px;
+  margin: 10px 10px;
+  background-color: #ececec;
+}
+#ProList .ProList_child:hover {
+  background-color: #dbdbdb;
+}
+#ProList .ProList_child .ProList_content {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+#ProList .ProList_child .ProList_content img {
+  width: 50%;
+  height: 50%;
+}
+#ProList .ProList_child .ProList_content img:hover {
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+}
+#ProList .ProList_child .ProList_title {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(179, 179, 179, 0.5);
+  color: #292929;
+  align-items: center;
+  justify-content: center;
+}

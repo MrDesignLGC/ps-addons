@@ -111,6 +111,45 @@ function CreateProduct(ele_p) {
 
 }
 
+/**
+ * 创建产品列表
+ */
+function CreateProList(ele_p,){
+
+    //文本
+    function cpl(id,photo_n,txt="text"){
+        let json =EJ({cn:"ProList_child"},[
+            EJ({cn:"ProList_content"},[
+                EJ({type:"img",id:id,attr:{"src":"./image/prolist/"+photo_n}}),
+            ]),
+            EJ({cn:"ProList_title"},[
+                EJ({type:"span",text:txt}),
+            ]),
+        ]);
+        return json;
+    }
+
+    let json = [
+        EJ({id:"ProList"},
+            [
+                cpl("ProList_retouch_free","retouch_free.png","Free Skin Beauty Retouch"),
+                cpl("ProList_skinRetouch","skinRetouch.png","Skin retouch pro"),
+                cpl("ProList_PhotoEffects","PhotoEffects.png","Photo Effects"),
+                cpl("ProList_cartoonEffects","cartoonEffects.png","Cartoon effects"),
+                cpl("ProList_AutomaticTypesetting","AutomaticTypesetting.png","Automatic Typesetting"),
+                cpl("ProList_text3d","text3d.png","3d text effects"),
+                cpl("ProList_translation","translation.png","Translation PSD"),
+                cpl("ProList_sketchEffects","sketchEffects.png","Sketch effects"),
+                cpl("ProList_shadow","shadow.png","Shadow tool"),
+                cpl("ProList_mark","mark.png","Add Watermark in Batch"),
+                cpl("ProList_ID_photo","ID_photo.png","ID Photo"),
+                cpl("ProList_handlelayers","handlelayers.png","Handle layers"),
+                cpl("ProList_exportalltext","exportalltext.png","Export all text"),
+                cpl("ProList_ElegantWriting","ElegantWriting.png","Elegant Writing"),
+            ])
+    ];
+    CreateELE(json, ele_p);
+}
 
 /**
  * 创建海报
@@ -137,7 +176,7 @@ function CreateFoot(ele_p) {
     let message={
         About_us:"About us",
         common_problem:"common problem",
-        foot_email:"e-mail:liu_guochao@foxmail.com",
+        foot_email:"liu_guochao@foxmail.com",
         foot_youtube:"youtube",
         foot_plugin:"photoshop plug-in",
         foot_ms:"Microsoft software",
@@ -168,13 +207,62 @@ function CreateFoot(ele_p) {
  */
 function CreateEvent(){
 
-
     CreateEvent_TopAndBottom();
     //海报
     AddEvent(GetID("banner"),"click",function(e){
         if(e.target.id=="banner1"){
             open_web_PS("c7ac739d");
         }
+    });
+
+    AddEvent(GetID("ProList"),"click",function(e){
+   
+
+        if(e.target.id=="ProList_skinRetouch"){
+            open_web_PS("c7ac739d");
+        }
+        if(e.target.id=="ProList_retouch_free"){
+            open_web_PS("3a0d9f39");
+        }
+        if(e.target.id=="ProList_PhotoEffects"){
+            open_web_PS("e4ca27aa");
+        }
+        if(e.target.id=="ProList_ID_photo"){
+            open_web_PS("572edab9");
+        }
+        if(e.target.id=="ProList_translation"){
+            open_web_PS("92dcdcaa");
+        }
+        if(e.target.id=="ProList_shadow"){
+            open_web_PS("2d5b1abf");
+        }
+        if(e.target.id=="ProList_text3d"){
+            open_web_PS("4e2e025d");
+        }
+        if(e.target.id=="ProList_mark"){
+            open_web_PS("cd550302");
+        }
+        if(e.target.id=="ProList_exportalltext"){
+            open_web_PS("e25efe4c");
+        }
+
+        if(e.target.id=="ProList_AutomaticTypesetting"){
+            open_web_PS("b8f5d8b9");
+        }
+        if(e.target.id=="ProList_cartoonEffects"){
+            open_web_PS("3175dc8c");
+        }
+        if(e.target.id=="ProList_sketchEffects"){
+            open_web_PS("6b3d739d");
+        }
+        if(e.target.id=="ProList_handlelayers"){
+            open_web_PS("0179c1c9");
+        }
+
+        if(e.target.id=="ProList_ElegantWriting"){
+            open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K","_blank");
+        }
+
     });
     
 
@@ -265,7 +353,7 @@ function CreateUI() {
     CreateELE([
         EJ({id:"content"})
     ], ele_p);
-    
+    CreateProList(ele_p)
     CreateFoot(ele_p);
 
 }

@@ -1,0 +1,60 @@
+#ProList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    background-color: rgb(253, 253, 253);
+
+    .ProList_child {
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        height: 150px;
+        margin: 10px 10px;
+        background-color: rgb(236, 236, 236);
+
+        &:hover {
+            // box-sizing: border-box;
+            // border: 1px solid #cacaca;
+            background-color: rgb(219, 219, 219);
+        }
+
+        .ProList_content {
+            display: flex;
+            flex-direction: column;
+            // background-color: rgb(226, 226, 226);
+            margin: 0px;
+            width: 100%;
+            height: 80%;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 50%;
+                height: 50%;
+
+                &:hover {
+                    cursor: pointer;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+
+        .ProList_title {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            width: 100%;
+            height: 20%;
+            background-color: rgba(179, 179, 179,0.5);
+            color: #292929;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
