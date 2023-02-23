@@ -133,7 +133,7 @@ function CreateProList(ele_p,){
         EJ({id:"ProList"},
             [
                 cpl("ProList_retouch_free","retouch_free.png","Free Skin Beauty Retouch"),
-                cpl("ProList_skinRetouch","skinRetouch.png","Skin retouch pro"),
+                cpl("ProList_skinRetouch","skinRetouch.png","Skin Beauty Retouch pro"),
                 cpl("ProList_PhotoEffects","PhotoEffects.png","Photo Effects"),
                 cpl("ProList_cartoonEffects","cartoonEffects.png","Cartoon effects"),
                 cpl("ProList_AutomaticTypesetting","AutomaticTypesetting.png","Automatic Typesetting"),
