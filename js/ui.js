@@ -451,7 +451,7 @@ function CreateEvent_TopAndBottom() {
     AddEvent(GetID("menu_bar"), "click", function (e) {
 
         if (e.target.id == "menu_home") {
-            console.log(window.location.host);
+            console.log(window.location);
             // open_web("../../index.html", "_self");
         }
         if (e.target.id == "menu_products") {
