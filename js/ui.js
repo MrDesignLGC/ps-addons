@@ -451,11 +451,14 @@ function CreateEvent_TopAndBottom() {
     AddEvent(GetID("menu_bar"), "click", function (e) {
 
         if (e.target.id == "menu_home") {
-            console.log(window.location,":abc");
+            // console.log(window.location.origin,":abc");
+            // window.location.href="sub/product/product.html";
+           
             // open_web("../../index.html", "_self");
         }
         if (e.target.id == "menu_products") {
             // window.open("./sub/product/product.html", "_self");
+            // window.location.href="index.html";
             open_web("https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421")
         }
         if (e.target.id == "menu_ps") {
@@ -517,6 +520,11 @@ function CreateEvent_TopAndBottom() {
         if (e.target.id == "foot_youtube") {
             open_web("https://www.youtube.com/channel/UCH6cap6hFRZ32byGZrsbmWQ");
         }
+
+        if (e.target.id == "foot_email") {
+            window.location.href="mailto:liu_guochao@foxmail.com";
+        }
+
     });
 }
 
