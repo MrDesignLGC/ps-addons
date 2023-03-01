@@ -286,4 +286,13 @@ function TextNodeTree(ele) {
 
 }
 
+/**
+ * 获取站点目录
+ */
+function GetHostPath(){
+
+    let h_v=window.document.location.pathname;
+    return h_v.substring(0,h_v.lastIndexOf("/"));
+
+}
 

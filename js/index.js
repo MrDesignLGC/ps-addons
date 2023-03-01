@@ -1,3 +1,4 @@
+
 CreateUI();
 
 //内容框架元素
@@ -9,3 +10,8 @@ CreateBanner(content_frame);
 CreateEvent();
 //初始化
 inti();
+// window.location.href="product.html"
+
+// console.log(host_v+"/sub/product/product.html");
+// window.open(GetHostPath()+"/sub/product/product.html","_self");
+
