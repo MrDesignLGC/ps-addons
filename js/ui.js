@@ -565,6 +565,6 @@ function open_web_PS(v, b) {
     if (b == undefined) {
         b = "_blank";
     }
-    window.open(("https://exchange.adobe.com/creativecloud/plugindetails.html/app/cc/" + v), b);
+    window.open(("https://exchange.adobe.com/apps/cc/" + v), b);
 
 }
