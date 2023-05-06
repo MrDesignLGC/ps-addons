@@ -27,7 +27,8 @@ function CreateMenu(ele_p) {
             AddWatermarkInBatch: "Add Watermark in Batch",
 
             windows: "windows",
-            ElegantWriting: "ElegantWriting"
+            ElegantWriting: "Elegant Writing",
+            ElegantVideoEditing: "Elegant Video Editing",
 
         }
 
@@ -215,6 +216,11 @@ function CreateMenu(ele_p) {
                                         id: "menu_writing",
                                         text: menu_text().ElegantWriting
                                     }),
+                                    EJ({
+                                        type: "li",
+                                        id: "menu_ElegantVideoEditing",
+                                        text: menu_text().ElegantVideoEditing
+                                    })
                                 ]),
                             ])
                         ]),
@@ -287,6 +293,7 @@ function CreateProList(ele_p, ) {
                 cpl("ProList_handlelayers", "handlelayers.png", "Handle layers"),
                 cpl("ProList_exportalltext", "exportalltext.png", "Export all text"),
                 cpl("ProList_ElegantWriting", "ElegantWriting.png", "Elegant Writing"),
+                cpl("ProList_ElegantVideoEditing", "ElegantVideoEditing.png", "Elegant Video Editing"),
             ])
     ];
     CreateELE(json, ele_p);
@@ -436,7 +443,11 @@ function CreateEvent() {
         }
 
         if (e.target.id == "ProList_ElegantWriting") {
-            open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K", "_blank");
+            open_web("https://apps.microsoft.com/store/detail/elegant-writing/9P78SB60MP4K", "_blank");
+        }
+
+        if (e.target.id == "ProList_ElegantVideoEditing") {
+            open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
         }
 
     });
@@ -509,7 +520,10 @@ function CreateEvent_TopAndBottom() {
             // open_web_PS("");
         }
         if (e.target.id == "menu_writing") {
-            open_web("https://www.microsoft.com/en-us/p/Elegant-Writing/9P78SB60MP4K", "_blank");
+            open_web("https://apps.microsoft.com/store/detail/elegant-writing/9P78SB60MP4K", "_blank");
+        }
+        if (e.target.id == "menu_ElegantVideoEditing") {
+            open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
         }
         // https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421
     });
