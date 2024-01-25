@@ -311,6 +311,10 @@ function CreateBanner(ele_p) {
                 id: "banner1",
                 cn: "banner_class"
             }),
+            EJ({
+                id: "banner3",
+                cn: "banner_class"
+            })
         ])
     ];
     CreateELE(json, ele_p);
@@ -395,6 +399,9 @@ function CreateEvent() {
     AddEvent(GetID("banner"), "click", function (e) {
         if (e.target.id == "banner1") {
             open_web_PS("c7ac739d");
+        }
+        if (e.target.id == "banner3") {
+            open_web("https://apps.microsoft.com/detail/9PB1187XWXT6?hl=en-us&gl=US");
         }
     });
 

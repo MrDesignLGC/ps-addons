@@ -44,6 +44,9 @@ body {
 #banner #banner2 {
   background-image: url(../image/banner2.jpg);
 }
+#banner #banner3 {
+  background-image: url(../image/banner3.jpg);
+}
 #foot {
   display: flex;
   flex-direction: row;
