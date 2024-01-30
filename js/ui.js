@@ -308,6 +308,10 @@ function CreateBanner(ele_p) {
             id: "banner"
         }, [
             EJ({
+                id: "banner_lb",
+                cn: "banner_class"
+            }),
+            EJ({
                 id: "banner1",
                 cn: "banner_class"
             }),
