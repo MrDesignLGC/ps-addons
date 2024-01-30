@@ -99,7 +99,7 @@ function loop_fun(items) {
 
     interval = setInterval(function () {
         loop_ab(items);
-    }, 3000); //启动代码
+    }, 5000); //启动代码
     // clearInterval(interval); //清除代码
 
 }
