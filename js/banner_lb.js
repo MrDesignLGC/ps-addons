@@ -2,8 +2,8 @@ let linksArr = [];
 let items;
 let interval;
 
-linksArr.push(["banner_1", "./image/banner1.jpg"]);
 linksArr.push(["banner_3", "./image/banner3.jpg"]);
+linksArr.push(["banner_1", "./image/banner1.jpg"]);
 
 /**
  * 创建海报轮播页面
