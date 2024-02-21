@@ -405,7 +405,7 @@ function CreateEvent() {
             open_web_PS("c7ac739d");
         }
         if (e.target.id == "banner3") {
-            open_web("https://apps.microsoft.com/detail/9PB1187XWXT6?hl=en-us&gl=US");
+            open_web("https://apps.microsoft.com/detail/9PB1187XWXT6");
         }
     });
 
@@ -454,11 +454,11 @@ function CreateEvent() {
         }
 
         if (e.target.id == "ProList_ElegantWriting") {
-            open_web("https://apps.microsoft.com/store/detail/elegant-writing/9P78SB60MP4K", "_blank");
+            open_web("https://apps.microsoft.com/detail/9p78sb60mp4k", "_blank");
         }
 
         if (e.target.id == "ProList_ElegantVideoEditing") {
-            open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
+            open_web("https://apps.microsoft.com/detail/9PB1187XWXT6", "_blank");
         }
 
     });

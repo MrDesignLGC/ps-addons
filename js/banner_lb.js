@@ -77,7 +77,7 @@ AddEvent(GetID("banner_content"), "click", function (e) {
         open_web_PS("c7ac739d");
     }
     if (e.target.id == "banner_3") {
-        open_web("https://apps.microsoft.com/detail/9PB1187XWXT6?hl=en-us&gl=US");
+        open_web("https://apps.microsoft.com/detail/9PB1187XWXT6");
     }
 
 }, true);
