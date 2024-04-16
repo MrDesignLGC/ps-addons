@@ -13,7 +13,8 @@ function CreateMenu(ele_p) {
 
             photoshop: "photoshop",
             SkinBeautyRetouch: "Skin Beauty Retouch",
-            FreeSkinBeautyRetouch: "Free Skin Beauty Retouch",
+            QuickRetouch: "Quick retouch",
+            FreeSkinBeautyRetouch: "Skin Beauty Retouch Mini",
             PhotoEffects: "Photo Effects",
             CartoonEffects: "Cartoon effects",
             SketchEffects: "Sketch effects",
@@ -78,6 +79,17 @@ function CreateMenu(ele_p) {
                                         text: menu_text().SkinBeautyRetouch
                                     }),
                                 ]),
+                                EJ({
+                                    type: "ul",
+                                    cn: "down_menu2"
+                                }, [
+                                    EJ({
+                                        type: "li",
+                                        id: "menu_quick_retouch",
+                                        text: menu_text().QuickRetouch
+                                    }),
+                                ]),
+                                
                                 EJ({
                                     type: "ul",
                                     cn: "down_menu2"
@@ -279,7 +291,8 @@ function CreateProList(ele_p, ) {
                 id: "ProList"
             },
             [
-                cpl("ProList_retouch_free", "retouch_free.png", "Free Skin Beauty Retouch"),
+                // cpl("ProList_retouch_Mini", "retouch_free.png", "Free Skin Beauty Retouch"),
+                cpl("ProList_retouch_quick", "retouch_quick.png", "quick retouch"),
                 cpl("ProList_skinRetouch", "skinRetouch.png", "Skin Beauty Retouch pro"),
                 cpl("ProList_PhotoEffects", "PhotoEffects.png", "Photo Effects"),
                 cpl("ProList_cartoonEffects", "cartoonEffects.png", "Cartoon effects"),
@@ -415,7 +428,10 @@ function CreateEvent() {
         if (e.target.id == "ProList_skinRetouch") {
             open_web_PS("c7ac739d");
         }
-        if (e.target.id == "ProList_retouch_free") {
+        if (e.target.id == "ProList_retouch_quick") {
+            open_web_PS("d075cd8d");
+        }
+        if (e.target.id == "ProList_retouch_Mini") {
             open_web_PS("3a0d9f39");
         }
         if (e.target.id == "ProList_PhotoEffects") {
@@ -488,6 +504,9 @@ function CreateEvent_TopAndBottom() {
         }
         if (e.target.id == "menu_retouch") {
             open_web_PS("c7ac739d");
+        }
+        if (e.target.id == "menu_quick_retouch") {
+            open_web_PS("d075cd8d");
         }
         if (e.target.id == "menu_retouch_free") {
             open_web_PS("3a0d9f39");
