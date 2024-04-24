@@ -26,6 +26,7 @@ function CreateMenu(ele_p) {
             TextEffect: "3DText Effect",
             ExportAllText: "ExportAllText",
             AddWatermarkInBatch: "Add Watermark in Batch",
+            BatchReplacePsdData:"Batch Replace Psd Data",
 
             windows: "windows",
             ElegantWriting: "Elegant Writing",
@@ -89,7 +90,19 @@ function CreateMenu(ele_p) {
                                         text: menu_text().QuickRetouch
                                     }),
                                 ]),
-                                
+
+                                //二级菜单
+                                EJ({
+                                    type: "ul",
+                                    cn: "down_menu2"
+                                }, [
+                                    EJ({
+                                        type: "li",
+                                        id: "menu_BatchReplacePsdData",
+                                        text: menu_text().BatchReplacePsdData
+                                    }),
+                                ]),
+
                                 EJ({
                                     type: "ul",
                                     cn: "down_menu2"
@@ -491,7 +504,7 @@ function CreateEvent_TopAndBottom() {
         if (e.target.id == "menu_home") {
             // console.log(window.location.origin,":abc");
             // window.location.href="sub/product/product.html";
-           
+
             // open_web("../../index.html", "_self");
         }
         if (e.target.id == "menu_products") {
@@ -510,6 +523,9 @@ function CreateEvent_TopAndBottom() {
         }
         if (e.target.id == "menu_retouch_free") {
             open_web_PS("3a0d9f39");
+        }
+        if (e.target.id == "menu_BatchReplacePsdData") {
+            open_web_PS("f321d602");
         }
         if (e.target.id == "menu_effects") {
             open_web_PS("e4ca27aa");
@@ -566,7 +582,7 @@ function CreateEvent_TopAndBottom() {
         }
 
         if (e.target.id == "foot_email") {
-            window.location.href="mailto:liu_guochao@foxmail.com";
+            window.location.href = "mailto:liu_guochao@foxmail.com";
         }
 
     });
