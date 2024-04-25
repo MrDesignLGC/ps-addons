@@ -10,6 +10,8 @@ function CreateMenu(ele_p) {
 
             home: "Home",
             product: "Products",
+            github: "Github",
+            createHTML: "createHTML",
 
             photoshop: "photoshop",
             SkinBeautyRetouch: "Skin Beauty Retouch",
@@ -26,7 +28,7 @@ function CreateMenu(ele_p) {
             TextEffect: "3DText Effect",
             ExportAllText: "ExportAllText",
             AddWatermarkInBatch: "Add Watermark in Batch",
-            BatchReplacePsdData:"Batch Replace Psd Data",
+            BatchReplacePsdData: "Batch Replace Psd Data",
 
             windows: "windows",
             ElegantWriting: "Elegant Writing",
@@ -249,7 +251,23 @@ function CreateMenu(ele_p) {
                                 ]),
                             ])
                         ]),
-                    ])
+                    ]),
+                    EJ({
+                        id: "menu_github",
+                        cn: "menu",
+                        text: menu_text().github
+                    }, [
+                        EJ({
+                            type: "ul",
+                            cn: "down_menu1"
+                        }, [
+                            EJ({
+                                type: "li",
+                                id: "menu_create_html",
+                                text: menu_text().createHTML
+                            })
+                        ])
+                    ]),
                 ])
 
             ])
@@ -490,6 +508,9 @@ function CreateEvent() {
             open_web("https://apps.microsoft.com/detail/9PB1187XWXT6", "_blank");
         }
 
+
+
+
     });
 
 
@@ -571,6 +592,11 @@ function CreateEvent_TopAndBottom() {
         if (e.target.id == "menu_ElegantVideoEditing") {
             open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
         }
+
+        if (e.target.id == "menu_create_html") {
+            open_web("https://github.com/MrDesignLGC/CreateHTML", "_blank");
+        }
+
         // https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421
     });
 
