@@ -252,22 +252,22 @@ function CreateMenu(ele_p) {
                             ])
                         ]),
                     ]),
-                    EJ({
-                        id: "menu_github",
-                        cn: "menu",
-                        text: menu_text().github
-                    }, [
-                        EJ({
-                            type: "ul",
-                            cn: "down_menu1"
-                        }, [
-                            EJ({
-                                type: "li",
-                                id: "menu_create_html",
-                                text: menu_text().createHTML
-                            })
-                        ])
-                    ]),
+                    // EJ({
+                    //     id: "menu_github",
+                    //     cn: "menu",
+                    //     text: menu_text().github
+                    // }, [
+                    //     EJ({
+                    //         type: "ul",
+                    //         cn: "down_menu1"
+                    //     }, [
+                    //         EJ({
+                    //             type: "li",
+                    //             id: "menu_create_html",
+                    //             text: menu_text().createHTML
+                    //         })
+                    //     ])
+                    // ]),
                 ])
 
             ])
@@ -593,9 +593,9 @@ function CreateEvent_TopAndBottom() {
             open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
         }
 
-        if (e.target.id == "menu_create_html") {
-            open_web("https://github.com/MrDesignLGC/CreateHTML", "_blank");
-        }
+        // if (e.target.id == "menu_create_html") {
+        //     open_web("https://github.com/MrDesignLGC/CreateHTML", "_blank");
+        // }
 
         // https://exchange.adobe.com/publisher/cc/73ac5795-8bce-424c-bec8-568cfd795421
     });
