@@ -4,7 +4,7 @@ let interval;
 
 
 linksArr.push(["banner_1", "./image/banner1.jpg"]);
-linksArr.push(["banner_3", "./image/banner3.jpg"]);
+linksArr.push(["banner_game1", "./image/game_banner1.jpg"]);
 
 
 /**
@@ -78,8 +78,8 @@ AddEvent(GetID("banner_content"), "click", function (e) {
     if (e.target.id == "banner_1") {
         open_web_PS("c7ac739d");
     }
-    if (e.target.id == "banner_3") {
-        open_web("https://apps.microsoft.com/detail/9PB1187XWXT6");
+    if (e.target.id == "banner_game1") {
+        open_web("https://store.steampowered.com/app/3311220/_Fairy_Tale_Tower_Defense/");
     }
 
 }, true);

@@ -34,6 +34,9 @@ function CreateMenu(ele_p) {
             ElegantWriting: "Elegant Writing",
             ElegantVideoEditing: "Elegant Video Editing",
 
+            games: "games",
+            FT_TD: "Fairy Tale Tower Defense",
+
         }
 
         return json;
@@ -249,6 +252,25 @@ function CreateMenu(ele_p) {
                                         text: menu_text().ElegantVideoEditing
                                     })
                                 ]),
+                            ]),
+                            EJ({
+                                type: "li"
+                            }, [
+                                EJ({
+                                    id: "menu_games",
+                                    text: menu_text().games
+                                }),
+                                //二级菜单
+                                EJ({
+                                    type: "ul",
+                                    cn: "down_menu2"
+                                }, [
+                                    EJ({
+                                        type: "li",
+                                        id: "menu_ft_td",
+                                        text: menu_text().FT_TD
+                                    })
+                                ]),
                             ])
                         ]),
                     ]),
@@ -360,7 +382,7 @@ function CreateBanner(ele_p) {
                 cn: "banner_class"
             }),
             EJ({
-                id: "banner3",
+                id: "banner_game1",
                 cn: "banner_class"
             })
         ])
@@ -444,14 +466,14 @@ function CreateEvent() {
 
     CreateEvent_TopAndBottom();
     //海报
-    AddEvent(GetID("banner"), "click", function (e) {
-        if (e.target.id == "banner1") {
-            open_web_PS("c7ac739d");
-        }
-        if (e.target.id == "banner3") {
-            open_web("https://apps.microsoft.com/detail/9PB1187XWXT6");
-        }
-    });
+    // AddEvent(GetID("banner"), "click", function (e) {
+    //     if (e.target.id == "banner1") {
+    //         open_web_PS("c7ac739d");
+    //     }
+    //     if (e.target.id == "banner_game1") {
+    //         open_web("https://store.steampowered.com/app/3311220/_Fairy_Tale_Tower_Defense/");
+    //     }
+    // });
 
     AddEvent(GetID("ProList"), "click", function (e) {
 
@@ -591,6 +613,10 @@ function CreateEvent_TopAndBottom() {
         }
         if (e.target.id == "menu_ElegantVideoEditing") {
             open_web("https://apps.microsoft.com/store/detail/elegant-video-editing/9PB1187XWXT6", "_blank");
+        }
+
+        if (e.target.id == "menu_ft_td") {
+            open_web("https://store.steampowered.com/app/3311220/Fairy_Tale_Tower_Defense/", "_blank");
         }
 
         // if (e.target.id == "menu_create_html") {
