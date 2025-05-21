@@ -35,7 +35,7 @@ function CreateMenu(ele_p) {
             ElegantVideoEditing: "Elegant Video Editing",
 
             games: "games",
-            FT_TD: "Fairy Tale Tower Defense",
+            FT_TD: "Fairy Tale TD 2",
 
         }
 
@@ -616,7 +616,7 @@ function CreateEvent_TopAndBottom() {
         }
 
         if (e.target.id == "menu_ft_td") {
-            open_web("https://store.steampowered.com/app/3311220/Fairy_Tale_Tower_Defense/", "_blank");
+            open_web("https://store.steampowered.com/app/3616320", "_blank");
         }
 
         // if (e.target.id == "menu_create_html") {

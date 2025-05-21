@@ -79,7 +79,7 @@ AddEvent(GetID("banner_content"), "click", function (e) {
         open_web_PS("c7ac739d");
     }
     if (e.target.id == "banner_game1") {
-        open_web("https://store.steampowered.com/app/3311220/_Fairy_Tale_Tower_Defense/");
+        open_web("https://store.steampowered.com/app/3616320");
     }
 
 }, true);
