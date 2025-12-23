@@ -16,7 +16,7 @@ function CreateMenu(ele_p) {
             photoshop: "photoshop",
             SkinBeautyRetouch: "Skin Beauty Retouch",
             QuickRetouch: "Quick retouch",
-            FreeSkinBeautyRetouch: "Skin Beauty Retouch Free",
+            FreeSkinBeautyRetouch: "Skin Beauty Retouch mini",
             PhotoEffects: "Photo Effects",
             CartoonEffects: "Cartoon effects",
             SketchEffects: "Sketch effects",
@@ -565,7 +565,7 @@ function CreateEvent_TopAndBottom() {
             open_web_PS("d075cd8d");
         }
         if (e.target.id == "menu_retouch_free") {
-            open_web_PS("791247ff");
+            open_web_PS("3a0d9f39");
         }
         if (e.target.id == "menu_BatchReplacePsdData") {
             open_web_PS("f321d602");
